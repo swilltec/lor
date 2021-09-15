@@ -1,0 +1,8 @@
+Django>=3.0<4.0
+python-dotenv==0.18.0
+
+djangorestframework==3.12.4
+django-cors-headers==3.7.0
+dj-rest-auth==2.1.7
+django-allauth==0.44.0
+drf-yasg>=1.17.1<=1.18.0
