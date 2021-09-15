@@ -6,7 +6,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title="LoR API",
         default_version='v1',
-        description="LoR Backend",
+        description="LoR API Backend",
         contact=openapi.Contact(email="contact@snippets.local"),
         license=openapi.License(name="BSD License"),
     ),
