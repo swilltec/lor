@@ -1,13 +1,10 @@
 """
 Django settings for production project.
 """
-import os
-from dotenv import load_dotenv
+
 
 from .base import *
 
-
-load_dotenv()  # take environment variables from .env.
 
 DEBUG = False
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')

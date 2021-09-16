@@ -22,6 +22,7 @@ from .swagger_api_docs import schema_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('core.api.urls')),
+    path('api-auth/', include('rest_framework.urls')),
 
     # Swagger documentation endpoints
     re_path(r'^swagger(?P<format>\.json|\.yaml)$',
@@ -30,7 +31,7 @@ urlpatterns = [
     re_path(r'^swagger/$',
             schema_view.with_ui('swagger', cache_timeout=0),
             name='schema-swagger-ui'),
-    re_path(r'',
-            schema_view.with_ui('redoc', cache_timeout=0),
-            name='schema-redoc'),
+    path('', 
+         schema_view.with_ui('redoc', cache_timeout=0),
+         name='schema-redoc'),
 ]

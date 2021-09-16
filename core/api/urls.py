@@ -7,14 +7,11 @@ from . import views
 
 router = DefaultRouter()
 router.register(r'users', views.UserViewSet, basename="users")
+router.register(r'characters', views.LorViewSet, basename="characters")
 
 
 urlpatterns = [
-    path('/', include(router.urls)),
-    path('/dj-rest-auth/', include('dj_rest_auth.urls')),
-    path('/dj-rest-auth/registration/',
-         include('dj_rest_auth.registration.urls')),
-
-    
-    path('api-auth/', include('rest_framework.urls')),
+    path('', include(router.urls)),
+    path('', include('dj_rest_auth.urls')),
+    path('signup', include('dj_rest_auth.registration.urls')),
 ]

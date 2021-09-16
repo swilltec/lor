@@ -10,7 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
+
+from dotenv import load_dotenv
+
+# take environment variables from .env.
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -34,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    
+
     # third-party apps
     'rest_framework',
     'rest_framework.authtoken',
@@ -46,7 +52,7 @@ INSTALLED_APPS = [
     'dj_rest_auth.registration',
     'drf_yasg',
     'simple_history',
-    
+
     # custom apps
     'core',
 ]
@@ -60,7 +66,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
+
     # third-party
     'simple_history.middleware.HistoryRequestMiddleware',
 ]
@@ -185,3 +191,5 @@ SWAGGER_SETTINGS = {
     'LOGIN_URL': '/api-auth/login/',
     'LOGOUT_URL': '/api-auth/logout/',
 }
+
+THE_ONE_API_KEY = os.getenv('THE_ONE_API_KEY', 'NDKNcnY0N1jpNaiYAWje')
