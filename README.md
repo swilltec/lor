@@ -1,4 +1,4 @@
-# Twipee
+# LOR
 
 Twipee is a django application developed for favoriting Lord of the Rings characters and quote,
 This application fetches data from [The One APi](https://the-one-api.dev/) which provides all data 
