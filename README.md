@@ -22,20 +22,10 @@ about The Lord of the Rings, the epic books by J. R. R. Tolkien and the official
   ```sh
       pip install -r requirements
   ```
-3. Create a django shell
+3. Run development server
    ```sh
-   python manage.py shell
+   python manage.py shell or make start
    ```
-
-4. Download nltk requirements packages for Natural Language Processing (Checking similarities)
-   ```sh
-   import nltk
-   nltk.download('popular')
-   ```
-5. Enter the command below to start app
-  ```sh
-      make start
-  ```
 
 6. Navigate to [API_DOCUMENTATION](http://localhost:8000/) to view API documentation
 NB: 
