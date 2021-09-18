@@ -5,11 +5,11 @@ from rest_framework import permissions
 schema_view = get_schema_view(
     openapi.Info(
         title="LoR API",
-        default_version='v1',
+        default_version="v1",
         description="LoR API Backend",
         contact=openapi.Contact(email="contact@snippets.local"),
         license=openapi.License(name="BSD License"),
     ),
     public=True,
-    permission_classes=(permissions.AllowAny, ),
+    permission_classes=(permissions.AllowAny,),
 )

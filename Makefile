@@ -1,5 +1,7 @@
+# Makefile for command shortcuts
+
 start:
-	python manage.py runserver --noreload
+	python manage.py runserver
 
 makemigrations:
 	python manage.py makemigrations
